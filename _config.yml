@@ -1,10 +1,10 @@
 # Site settings
-title: 
+title: First Project
 header-img: img/home-bg.png
 email: nichia@gmail.com
 copyright_name: nichia
 description: > # this means to ignore newlines until "baseurl:"
-  
+  CLI Data Gem Project
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  nichia
