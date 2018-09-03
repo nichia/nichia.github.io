@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "Thoughts, Experiences …. Switching from CPB to Online Bootcamp"
-date:       2018-09-03 20:06:08 +0000
+date:       2018-09-03 16:06:08 -0400
 permalink:  thoughts_experiences_switching_from_cpb_to_online_bootcamp
 ---
 
 
 Feeling like I’ve been with Flatiron School for years… literally… 
 
-I first came across Flatiron School the summer of 2016. The long summer holiday is an ideal time for exploring and contemplating a career change for a Montessori preschool teacher. After trying out some free courses on various coding plate-forms, which included Flatiron School’s Learn, Codecademy and Udacity, I decided to enroll with the Community-powered Bootcamp (Full Stack Web Development curriculum). 
+I first came across Flatiron School in the summer of 2016. The long summer holiday is an ideal time for exploring and contemplating career changes for a Montessori preschool teacher. After trying out some free courses on various coding plate-forms, which included Flatiron School’s Learn, Codecademy and Udacity, I decided to enroll with the Community-powered Bootcamp (Full Stack Web Development curriculum). 
 
 It made perfect sense for me to join this program March of 2017. It was a time of change, a transition period of getting ready to relocate from the history rich city of Philadelphia to Tampa Florida, the city of sunshine. It was a busy time of settling and re-establishing new routines, so I knew there would be many interludes, of which I will not be studying. The flexibility to study at my own pace and only forking out $149 each month instead of the $1,500 per month for the Online bootcamp was ideal for me.
 
