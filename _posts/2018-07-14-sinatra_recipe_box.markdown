@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sinatra Recipe Box"
-date:       2018-07-14 19:59:41 +0000
+date:       2018-07-14 15:59:42 -0400
 permalink:  sinatra_recipe_box
 ---
 
@@ -14,19 +14,18 @@ Here's the steps taken to complete this project.
 2. Setup file structure (files and directories)
 
 3. Create main files:
-
-- README.md
-- NOTE.md
-- spec.md (copy from project assessment)
-- LICENSE (created by github)
-- config/environment.rb
-- Gemfile then run bundle install to install any gems and gem dependencies for this application
-- Rakefile
-- config.ru
+* README.md
+* NOTE.md
+* spec.md (copy from project assessment)
+* LICENSE (created by github)
+* config/environment.rb
+* Gemfile then run bundle install to install any gems and gem dependencies for this application
+* Rakefile
+* config.ru
 
 4. Create the db tables and models.
-- create tables, type rake db:create_migration NAME=create_yourtablename. Create all the table.
-- run rake db:migrate, and all your tables will be added
+* create tables, type rake db:create_migration NAME=create_yourtablename. Create all the table.
+* run rake db:migrate, and all your tables will be added
 
 5. Setup associations for the tables /app/models/
 
