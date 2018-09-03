@@ -23,9 +23,11 @@ Here's the steps taken to complete this project.
 * Rakefile
 * config.ru
 
+
 4. Create the db tables and models.
 * create tables, type rake db:create_migration NAME=create_yourtablename. Create all the table.
 * run rake db:migrate, and all your tables will be added
+
 
 5. Setup associations for the tables /app/models/
 
