@@ -1,15 +1,14 @@
 # Site settings
+author: Ni Chia
 title: An Exciting Journey! 
 header-img: img/home-bg.png
 email: nichia@gmail.com
-copyright_name: nichia
+copyright_name: Ni Chia
 description: > # this means to ignore newlines until "baseurl:"
   with Flatiron School
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  nichia
-learn_profile: nichia
-email_username: nichia@gmail.com
 
 # Build settings
 markdown: kramdown
