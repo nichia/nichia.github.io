@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Portfolio Project: CLI Data Gem"
-date:       2018-02-28 18:47:14 +0000
+date:       2018-02-28 13:47:14 -0500
 permalink:  portfolio_project_cli_data_gem
 ---
 
@@ -21,8 +21,6 @@ During the project, there was many days lost when I cannot fix a program bug. Bu
 This CLI gem is on [RubyGems](https://rubygems.org/gems/book-releases)
 - To install the gem, type 'gem install book-releases' on the command prompt
 - To run the application, type 'book-releases'
-
-Video walkthrough of the application is on [YouTube](https://youtu.be/GHABEe5IkqQ)
 
 Book-Releases code is on [github](https://github.com/nichia/book_releases_cli_app).
 
