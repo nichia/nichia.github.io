@@ -19,8 +19,8 @@ The application uses Open-uri and Nokogiri (both are ruby gems) to access and sc
 During the project, there was many days lost when I cannot fix a program bug. But, whether because I restart my computer or through the use of the Pry debugger, things do eventually move forward. Never lose hope!
 
 This CLI gem is on [RubyGems](https://rubygems.org/gems/book-releases)
-- To install the gem, type 'gem install book-releases' on the command prompt
-- To run the application, type 'book-releases'
+- To install the gem, type ```gem install book-releases``` on the command prompt
+- To run the application, type ```book-releases```
 
 Book-Releases code is on [github](https://github.com/nichia/book_releases_cli_app).
 
