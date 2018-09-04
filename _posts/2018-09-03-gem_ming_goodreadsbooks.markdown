@@ -21,8 +21,8 @@ When testing the completed GoodreadsBooks CLI gem, I realized there’s a perfor
 To fix the slow upfront loading time when users select a new awards year, refactoring was needed to only scrape each detailed book information when users select that book for detailed viewing. This modification sped up the initial loading time to less than 10 seconds each time a new awards year is selected. However, the trade-off for this speed is a slower display time when users select a new book for detailed viewing as Nokogiri parser is called to access and scrape the book information the first-time user selects this book for detailed viewing. If user re-selects this book for detailed viewing subsequent times, we do not have this slow display issue as the data have already been scraped and saved the first time this book is selected. 
 
 GoodreadsBooks CLI gem is on [RubyGems](https://rubygems.org/gems/goodreads-books)
-- To install the gem, type 'gem install goodreads-books' on the command prompt
-- To run the application, type 'goodreads-books'
+- To install the gem, type ```gem install goodreads-books``` on the command prompt
+- To run the application, type ```goodreads-books```
 
 GoodreadsBooks code is on [github](https://github.com/nichia/goodreads_books).
 
