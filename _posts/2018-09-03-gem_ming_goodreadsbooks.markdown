@@ -8,9 +8,9 @@ permalink:  gem_ming_goodreadsbooks
 
 Introducing the GoodreadsBooks CLI gem!
 
-This command line application lists books that are Winners of Goodreads Choice Awards. By default, the app will list the most recent choice awards winning books for each book category from [Goodreads web page](https://www.goodreads.com/choiceawards).  
+This command line application lists books that are Winners of Goodreads Choice Awards. By default, the app will list the most recent choice awards winning books for each book category from [Goodreads](https://www.goodreads.com/choiceawards).  
 
-Users have the option to select a different Choice Awards year to get a list of the winning books from that chosen year. The awards year available for accessing (scraping) is from 2010 to the most recent year, which is usually the previous calendar year. From the list, users have the option to choose a book and get detailed information about their selected book. In addition, users can select to open a link to Goodreads website to read the reviews/information about that book.
+Users have the option to select a different Choice Awards year to get a list of the winning books from that chosen year. The awards year available for accessing (scraping) is from 2010 to the most recent year, which is usually the previous calendar year. From the list, users have the option to choose a book and get detailed information about their selected book. In addition, users can select to open a link to Goodreads website to read the reviews & information about that book.
 
 This is the second Ruby Gem that I’ve built for the CLI Data Gem Project assessment. Having completed the first application early February, I figured it’ll probably take me a while to peruse and refactor the first application to function better… (hint: the first Upcoming Book Releases data gem is slow… it needs to be refactored…). Might as well build another gem, keeping in mind the performance issue that I might face in scraping the data. 
 
