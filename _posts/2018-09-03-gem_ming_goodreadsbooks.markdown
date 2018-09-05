@@ -16,13 +16,13 @@ This is the second Ruby Gem that I’ve built for the CLI Data Gem Project asses
 
 It’s so much easier to build the CLI gem a second time. Initially, I planned on coding the user interface prompts and use ```heredoc``` to simulate the data. However, once I started and after examining the html codes and identifying the data for scraping, I decided to change my approach and get the data scraping methods working first.
 
-When testing the completed GoodreadsBooks CLI gem, I realized there’s a performance issue. It takes around 60 seconds to scrape the 20 winning books from year 2017. This performance issue will surface each time users select a new awards year, which calls the Nokogiri parser to access and scrape the best book of each category data from Goodreads web page . For each category’s best book, Nokogiri parser is called again to access and scrape detailed information of that book (2nd level of html page). The advantage in getting the detailed information of the best books upfront, but having to put up with the slow speed, is that GoodreadsBooks will efficiently display the book information each time users select a best book for viewing.
+When testing the completed GoodreadsBooks CLI gem, I realized there’s a performance issue. It takes around 60 seconds to scrape the 20 winning books from year 2017. This performance issue will surface each time users select a new awards year, which calls the Nokogiri parser to access and scrape the best book of each category data from Goodreads web page . For each category’s best book, Nokogiri parser is called again to access and scrape detailed information of that book (2nd level of html page). The advantage in getting the detailed information of the best books upfront, is that GoodreadsBooks will efficiently display the book information each time users select a best book for viewing.
 
 A trade off is to fix the slow upfront loading time when users select a new awards year, and having a slower display time when users select a new best book for detailed viewing. I went with this approach. To change the code, refactoring was needed to only scrape each detailed book information when users select that book for viewing. 
 
-This modification sped up the initial loading time to just under 10 seconds each time a new awards year is selected. When users then select a best book for detailed viewing, if the book details have not been scraped from Goodreads web page, Nokogiri parser is called to access and scrape this book details (resulting in a slowing screen display when this function is performed). 
+This modification sped up the initial loading time to just under 10 seconds each time a new awards year is selected. When users then select a best book for detailed viewing, if the book details have not been scraped from Goodreads web page (i.e. first time viewing this book), Nokogiri parser is called to access and scrape this book's details, resulting in a slower screen display when this function is performed. 
 
-I’m pleased with the improved performance of the GoodreadsBooks CLI gem. I hope you are too. 
+Overall, I’m pleased with the improved performance of the GoodreadsBooks CLI gem. I hope you are too. 
 
 GoodreadsBooks CLI gem is on [RubyGems](https://rubygems.org/gems/goodreads-books)
 - To install the gem, type ```gem install goodreads-books``` on the command prompt
