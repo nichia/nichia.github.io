@@ -16,7 +16,7 @@ The take away after finishing the project is that the internet is the greatest s
 
 As I’m coding, it’s not that simple to translate ideas into code, and I haven’t programmed long enough to remember the commands and syntaxes, but because I know what I wanted to achieve, I’m able to search the net for resources on how to implement my ideas. 
 
-After completing the basic user login/signup logic, I’m able to improve this process. There’re tons of resources on Active Record validations to enforce username, email and password formatting and to add password confirmation on user signup and on password changes. This simple change transforms the feel of the application, making it look so much more legitimate.
+After completing the basic user login/signup logic, I’m able to improve this process. You can find tons of resources on Active Record validations to enforce username, email and password formatting and to add password confirmation on user signup and on password changes. This simple change transforms the feel of the application, making it look so much more legitimate.
 
 Now that I’ve built my first web application using the more lightweight Sinatra web framework, I’m ready and excited to take on Ruby on Rails, to uncover the ‘magic’!
 
