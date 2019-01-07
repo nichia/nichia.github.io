@@ -7,7 +7,7 @@ permalink:  kitchen_and_recipes_my_rails_project
 
 Kitchenandrecipes is a web application that manages and shares recipes.
 
-The application is built using Ruby on Rails framework and it manages data through forms and RESTful routes. It uses devise gem to provide standard user authentication for signup, login, logout and passwords. In addition, the authentication system allows login from third party services such as Facebook, Google and Twitter implemented via omniauth gem. Cocoon is a great gem utilized to handle the nested forms so that users can input all the recipe information in one form.
+The application is built using Ruby on Rails framework and it manages data through forms and RESTful routes. It uses devise gem to provide standard user authentication for signup, login, logout and passwords. In addition, the authentication system allows login from third party services such as Facebook, Google and Github implemented via omniauth gem. Cocoon is a great gem utilized to handle the nested forms so that users can input all the recipe information in one form.
 
 For the front-end, I decided to use Twitter Bootstrap 4 gem which allows the use of 'card' to display images of the recipes. I ended up upgrading to Ruby 2.5.0 as this version provides the method to redirect http to https to access user avatar image from facebook.
 
