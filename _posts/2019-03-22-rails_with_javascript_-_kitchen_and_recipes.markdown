@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails with Javascript - Kitchen&Recipes"
-date:       2019-03-22 14:53:39 +0000
+date:       2019-03-22 10:53:40 -0400
 permalink:  rails_with_javascript_-_kitchen_and_recipes
 ---
 
