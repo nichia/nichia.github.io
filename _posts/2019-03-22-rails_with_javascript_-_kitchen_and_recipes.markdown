@@ -10,7 +10,7 @@ One would have thoght working off an existing project, adding new functionality,
 
 The requirement of this project is to add dynamic Javascript front end features to my previous Ruby on Rails application, at the background, making ajax data interchanges with rails server via Json Api, without using rails "remote: true" function.
 
-To keep with the theme of single page application, I reserved the root "/" url as the landing page for the dynamic javascript content display.  My intention is to maintain the original functionalies of the Rails application when accessing other pages of Kitchen&Recipes.
+To keep with the theme of single page application, I reserved the root "/" url as the landing page for the dynamic javascript content display.  My intention is to maintain the original functionalities of the Rails application when accessing other pages of Kitchen&Recipes.
 
 On starting Kitchen&Recipes, the application listens for the landing page window to display a list of recipes. Rails server-side pagination was added to handle the large number of recipe records so reading data from the DOM will not be unacceptly slow.
 
