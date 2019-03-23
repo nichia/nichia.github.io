@@ -8,7 +8,7 @@ permalink:  rails_with_javascript_-_kitchen_and_recipes
 
 One would have thoght working off an existing project, adding new functionality, is an easier process than creating a brand new application. Not so, as I soon realized upon starting my fourth project for the Fullstack web developement program. 
 
-The requirement of this project is to add dynamic Javascript front end features to my previous Ruby on Rails application, at the background, making ajax data interchanges with rails server via Json Api, without using rails "remote: true" function.
+The requirement of this project is to add dynamic Javascript front end features to my previous Ruby on Rails application, at the background, making ajax data interchanges with rails server using Json Api, without utilizing rails "remote: true" function.
 
 To keep with the theme of single page application, I reserved the root "/" url as the landing page for the dynamic javascript content display.  My intention is to maintain the original functionalities of the Rails application when accessing other pages of Kitchen&Recipes.
 
