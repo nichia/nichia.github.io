@@ -14,7 +14,7 @@ To keep with the theme of single page application, I reserved the root "/" url a
 
 On starting Kitchen&Recipes, the application listens for the landing page window to display a list of recipes. Rails server-side pagination was added to handle the large number of recipe records so reading data from the DOM will not be unacceptly slow.
 
-After loading all the recipes, the program listens for a click on any of the links available on the page (with the exceptions of links on the navigation bar which is still accessing the Rails function). 
+After loading a page of the recipes, the program listens for a click event on any of the links available on the page (with the exceptions of links on the navigation bar which is still accessing the Rails function). 
 
 Links available for users to click includes: 
 - list my recipes or other user's recipes,
