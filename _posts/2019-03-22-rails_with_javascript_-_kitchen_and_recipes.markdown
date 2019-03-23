@@ -22,6 +22,6 @@ Links available for users to click includes:
 - add/show/edit/delete a recipe, and
 - add/edit/delete a review.
 
-There were challenges that I faced when writting the application, and it's always so rewarding to learn so much in solving the issues each step of the way.
+There were many challenges that I faced when writting the application, it's been so rewarding to learn so much during the process of solving these challenges.
 
 
