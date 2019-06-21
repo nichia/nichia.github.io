@@ -19,6 +19,6 @@ The basics of Campoutz is done and deployed to heroku.
 Click on the link to check out some campgrounds: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/)
 
 
-<sub><sup>* create your own sign-up or use this pre-made account to save to favorites:  ' username: lorem and password: password </sup></sub>
+<sub><sup>* create your own sign-up or use this pre-made account to save to favorites - username: lorem and password: password </sup></sub>
  
 
