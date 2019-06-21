@@ -11,12 +11,12 @@ As expected, it was a tough project and the process of working through the chall
 
 Integrating JWT (JSON Web Tokens) authentication/verification process would have to be one of the toughest part of writing this application. JWT is a type of token-based authentication where for every single request from a client to the server, a token is passed for authentication, supporting the stateless API calls. Since I wanted to have user specific content, like saving favorites, or adding comments (still to be implemented), authentication process is a necessary requirement of this app.  
 
-The use of Semantic UI components for styling the app was really helpful as the documentation was thorough, and there wasn’t much of a learning curve. For each styling feature that I implemented, I was able to easily follow the document and tailor it to my needs. Adding pagination for the campground listing turned out easier than anticipated with Semantic UI.
+The use of Semantic UI components for styling the app was really helpful as the documentation was thorough, and there wasn’t much of a learning curve. For each styling feature that I implemented, I was able to easily follow the document and tailor it to my needs. Adding pagination for the list of campgrounds turned out easier than anticipated with Semantic UI.
 
-The basics of Campoutz is done and deployed to heroku. 
+The basics of Campoutz is done and deployed to heroku. Go check out some campgrounds 
 
-https://campoutz.herokuapp.com/
+[https://campoutz.herokuapp.com/]([https://campoutz.herokuapp.com/)
 
-(Sign up and login to save your favorite campgrounds, or use this pre-made account login 'username: lorem' and 'password: password'.)
+(sign up and login to save your favorite campgrounds, or use this pre-made account login 'username: lorem' and 'password: password'.)
  
 
