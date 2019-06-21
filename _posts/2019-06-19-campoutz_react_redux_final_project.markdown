@@ -16,9 +16,9 @@ The use of Semantic UI components for styling the app was really helpful as the 
 The basics of Campoutz is done and deployed to heroku. 
 
 
-You can heck out some campgrounds on: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/)
+Click on the link to check out some campgrounds: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/)
 
 
-(create your own sign-up or use this pre-made account to save to favorites:  'username: lorem' and 'password: password'.)
+<sub><sup>* create your own sign-up or use this pre-made account to save to favorites:  ' username: lorem and password: password </sup></sub>
  
 
