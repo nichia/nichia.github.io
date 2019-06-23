@@ -148,7 +148,7 @@ Login to Heroku from the root directory of the project: `$heroku login`
 
 The campoutz app to be deployed on Heroku is a node.js application, so we need to create a package.json file in the root folder for our application. This package.json file is separate from the package.json file that was created for the client react app
 .
-Create `package.json` file in the root directory: `$npm init`	
+Create `package.json` file in the root directory with this command: `$npm init`	
 
 Then update the file to include the script values:
 
@@ -179,8 +179,9 @@ $heroku buildpacks:add heroku/nodejs --index 1
 $heroku buildpacks:add heroku/ruby --index 2
 ```
 
-[Buildpacks]( https://devcenter.heroku.com/articles/buildpacks) will tell Heroku that we want to use two build processes, first use node to manage the front end (requires `package.json`), and then ruby for the Rails API (requires `gemfile`).
-We can now test our production build locally with our Rake task `rake start:production`. This rake task will run foreman (with our new Procfile) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file).
+[Buildpacks]( https://devcenter.heroku.com/articles/buildpacks) will tell Heroku that we want to use two build processes, first use node to manage the front end (requires *package.json*), and then ruby for the Rails API (requires *gemfile*).
+
+We can now test our production build locally with our Rake task `$rake start:production`. This rake task will run foreman (with our new Procfile) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file).
 
 Remember to add the /public folder to your .gitignore so it doesn’t get saved to GitHub
 
@@ -207,7 +208,12 @@ Finally, configure each of the environment variable from Heroku website or using
 $ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 ```
 
-Run `Heroku config` to see a list of the configured environment variables.
+Run `$heroku config` to check a list of the configured environment variables.
+
+Finally,  celebrate deploying your application:
+
+```$heroku open```
+
 
 ## Conclusion
 That completes the deployment of Campoutz app to the internet.
