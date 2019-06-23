@@ -32,15 +32,14 @@ end
 	
 Update our gem: `$ bundle install`
 
-Create a `Profile.dev` file in root directory (we’ll only use this for dev since we don’t need a node server in production):
+Create a `Profile.dev` file in root directory (we’ll only use this for dev since we don’t need a node server in production) to contain:
 
 ```
 web: cd client && PORT=3000 npm start
 api: PORT=3001 && bundle exec rails s
 ```
 
-With Foreman set up to manage multiple processes, we can run Campoutz with just the terminal command:
-` $ foreman start -f Procfile.dev`
+With Foreman set up to manage multiple processes, we can run Campoutz with just the terminal command: `$ foreman start -f Procfile.dev`
 
 Or we can create a rake file `start.rake` in our lib/tasks directory to let us run the app with a single terminal command: `$ rake start`
 
@@ -118,7 +117,7 @@ REACT_APP_RIDB_API_KEY=123456a7-1234-1234-1234-12b123c0ab12
 REACT_APP_GOOGLE_MAPS_API_KEY=AbcdStYasI1wnj6wWCHWn3-4HR9gHKBG
 ```
 
-We can now access the keys and values defined in our  *.env* file:
+We can now access the keys and values defined in our  *.env* file. For example:
 
 ```
 const RIDB_URL = `${process.env.REACT_APP_API_RIDB_ENDPOINT}/api/v1`;
@@ -149,7 +148,7 @@ Then update the file to include the script values:
   	}
 ```
 ### Procfile for production
-Next create a Procfile in our root directory to tell production how to start the rails app (note: this was a step setup in rake start:production earlier on). Add the below line to *Profile*.
+Next create a new `Procfile` in our root directory to tell production how to start the rails app (note: this was a step setup in rake start:production earlier on). Add the below line to *Procfile*.
 
 ```
 web: bundle exec rails s 
