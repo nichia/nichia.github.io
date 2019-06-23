@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Campoutz - Heroku Deployment"
-date:       2019-06-23 16:20:50 +0000
+date:       2019-06-23 12:20:51 -0400
 permalink:  campoutz_-_heroku_deployment
 ---
 
@@ -12,11 +12,16 @@ These two blog posts, [A Rock Solid, Modern Web Stack—Rails 5 API + ActiveAdmi
 
 ## Foreman
 
-Without Foreman, in order to run Campoutz locally, we require two terminal windows, one to execute the Rails API server `$rails s -p 3001` and the other to execute webpac dev server `$npm star`
+Without Foreman, in order to run Campoutz locally, we would use two terminal, one to execute the Rails API server `$rails s -p 3001` and the other to execute webpac dev server `$npm star`
+
+To simplify the boot up, we install Foreman to run the app with a single command.
 
 Set up Foreman:
-	Install Foreman gem: `$gem install Foreman`
-	Add Foreman to our `gemfile` (in :development group):
+
+Install Foreman gem: `$gem install Foreman`
+
+Add Foreman to our `gemfile` (in :development group):
+
 ```
 group :development, :test do
   # Boostrap RSpec
@@ -29,7 +34,8 @@ group :development, :test do
   gem 'foreman', '~> 0.82.0'
 end
 ```
-	Update our gem: `$bundle install`
+	
+Update our gem: `$bundle install`
 
 Create a Profile.dev (we’ll only use this for dev since we don’t need a node server in production):
 ```
@@ -40,6 +46,7 @@ api: PORT=3001 && bundle exec rails s
 With Foreman set up to manage multiple processes, we can run Campoutz with just the terminal command: ` $foreman start -f Procfile.dev `
 
 Or we can create a rake file `start.rake` in our lib/tasks directory to let us run the app with a single terminal command: `$rake start`
+
 ```
 namespace :start do
   desc 'Start development server'
