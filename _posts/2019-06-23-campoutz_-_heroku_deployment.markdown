@@ -5,19 +5,14 @@ date:       2019-06-23 12:20:51 -0400
 permalink:  campoutz_-_heroku_deployment
 ---
 
-
 Now that Campoutz app is completed and running locally, it was time to look into sharing the app on the internet. I decided to stay on familiar ground and deploy my first web application on Heroku, like many of my fellow Flatiron School classmates.
 
 These two blog posts, [A Rock Solid, Modern Web Stack—Rails 5 API + ActiveAdmin + Create React App on Heroku](https://blog.heroku.com/a-rock-solid-modern-web-stack) and [ReactJS + Ruby on Rails API + Heroku App](https://medium.com/@bruno_boehm/reactjs-ruby-on-rails-api-heroku-app-2645c93f0814) were really helpful in explaining  the steps for deploying web stack applications with ReactJs frontend and Ruby on Rails API backend on Heroku. After reading these blog posts and the articles provided by [Heroku](https://devcenter.heroku.com/), I was able to host Campoutz app on Heroku.
-
 ## Foreman
-
 Without Foreman, in order to run Campoutz locally, we would use two terminal, one to execute the Rails API server `$rails s -p 3001` and the other to execute webpac dev server `$npm star`
 
 To simplify the boot up, we will install Foreman to run the app with a single command.
-
 ### Set up Foreman:
-
 Install Foreman gem: `$gem install Foreman`
 
 Add Foreman to our `gemfile` (in :development group):
@@ -64,10 +59,7 @@ end
 
 task :start => 'start:development'
 ```
-
-
 ## React Router
-
 To handle different pages within Create React App (using React Router) will require changes to the Rails app.
 
 First tell Rails to pass any HTML requests that it doesn’t catch (not listed on *config/routes* file) to our Create React App. 
@@ -107,10 +99,7 @@ Change any new controllers you make to inherit from *ApiController*, not *Applic
 class UserController < ApiController
 end
 ```
-
-
 ### Environment Variables: Create-React-App & Dotenv
-
 dotenv is a module that loads variables from a .env file into process.env. It's used for storing keys, URL’s and other sensitive information.
 
 Install dotenv module: `npm install --save dotenv `
@@ -136,18 +125,13 @@ const RIDB_API_KEY = process.env.REACT_APP_RIDB_API_KEY;
 Later, when creating Heroku app, we can set up each of the environment variables using terminal command `$heroku config:set`.
 
 Remember to add the .env file to your .gitignore so it doesn’t get saved to GitHub
-
 ## Heroku: Deployment
-
 Create an account on [Heroku website]( https://signup.heroku.com/login).
 
 Install [Heroku CLI]( https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
-Login to Heroku from the root directory of the project: `$heroku login`
-
-	
+Login to Heroku from the root directory of the project: `$heroku login`	
 ### `package.json` for node.js
-
 The campoutz app to be deployed on Heroku is a node.js application, so we need to create a package.json file in the root folder for our application. This package.json file is separate from the package.json file that was created for the client react app
 .
 Create `package.json` file in the root directory with this command: `$npm init`	
@@ -161,22 +145,13 @@ Then update the file to include the script values:
     	"postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   	}
 ```
-
-
 ### Procfile for production
-
 Next create a Procfile in our root directory to tell production how to start the rails app (note: this was a step setup in rake start:production earlier on). Add the below line to Profile.
 
 ``` web: bundle exec rails s ```
-
-
 ### Heroku: Create app
-
 Create your app on Heroku either om Heroku website or from the terminal using Heroku CLI: `$heroku apps:create campoutz`
-
-
 #### Heroku: Buildpack
-
 Let’s now tell Heroku to start by building the node app using package.json, and then build the rails app with the following terminal commands:
 
 ```
@@ -189,10 +164,7 @@ $heroku buildpacks:add heroku/ruby --index 2
 We can now test our production build locally with our Rake task `$rake start:production`. This rake task will run foreman (with our new Procfile) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file).
 
 Remember to add the /public folder to your .gitignore so it doesn’t get saved to GitHub
-
-
 ### Heroku: Push changes
-
 Now we are ready to push the production app out to Heroku with these terminal commands:
 ```
 $git add .
@@ -205,10 +177,7 @@ After the app is built on Heroku, set up the database and seed file :
 $heroku run rake db:migrate
 $heroku run rake db:seed
 ```
-
-
 ### Heroku: Environment variables
-
 Finally, configure each of the environment variable from Heroku website or using Heroku CLI command `heroku config:set key=value`:
 
 ```
@@ -220,9 +189,6 @@ Run `$heroku config` to check a list of the configured environment variables.
 Finally,  celebrate deploying your application:
 
 ```$heroku open```
-
-
 ## Conclusion
 That completes the deployment of Campoutz app to the internet.
-
 You can find my app here: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/) 
