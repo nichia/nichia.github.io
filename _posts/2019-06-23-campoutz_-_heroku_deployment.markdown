@@ -65,15 +65,16 @@ end
 task :start => 'start:development'
 ```
 
+
 ## React Router
 
 To handle different pages within Create React App (using React Router) will require changes to the Rails app.
 
-First tell Rails to pass any HTML requests that it doesn’t catch (not on listed on config/routes file) to our Create React App. 
+First tell Rails to pass any HTML requests that it doesn’t catch (not listed on *config/routes* file) to our Create React App. 
 
-Change the app/controllers/application_controller.rb from using the *API* to using *Base*.
+Change the *app/controllers/application_controller.rb* from using the *API* to using *Base*.
 
-In the app/controllers/application_controller.rb, add a fallback_index_html method:
+In the *app/controllers/application_controller.rb*, add a fallback_index_html method:
 ```
 class ApplicationController < ActionController::Base
 
@@ -83,7 +84,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-Then add *get* route at the bottom of the config/routes.rb:
+Then add *get* route at the bottom of the *config/routes.rb* file:
 
 ```
 get '*path', to: "application#fallback_index_html", constraints: ->(request) do
@@ -93,7 +94,7 @@ End
 
 That way Rails will pass anything it doesn’t match over to the *client/index.html* so that React Router can take over.
 
-Next, create a new `api_controller.rb`  file to the app/controllers:
+Next, create a new `api_controller.rb`  file under the *app/controllers* directory:
 
 ```
 class ApiController < ActionController::API
@@ -106,6 +107,7 @@ Change any new controllers you make to inherit from *ApiController*, not *Applic
 class UserController < ApiController
 end
 ```
+
 
 ### Environment Variables: Create-React-App & Dotenv
 
@@ -160,15 +162,18 @@ Then update the file to include the script values:
   	}
 ```
 
+
 ### Procfile for production
 
 Next create a Procfile in our root directory to tell production how to start the rails app (note: this was a step setup in rake start:production earlier on). Add the below line to Profile.
 
 ``` web: bundle exec rails s ```
 
+
 ### Heroku: Create app
 
 Create your app on Heroku either om Heroku website or from the terminal using Heroku CLI: `$heroku apps:create campoutz`
+
 
 #### Heroku: Buildpack
 
@@ -185,6 +190,7 @@ We can now test our production build locally with our Rake task `$rake start:pro
 
 Remember to add the /public folder to your .gitignore so it doesn’t get saved to GitHub
 
+
 ### Heroku: Push changes
 
 Now we are ready to push the production app out to Heroku with these terminal commands:
@@ -199,7 +205,8 @@ After the app is built on Heroku, set up the database and seed file :
 $heroku run rake db:migrate
 $heroku run rake db:seed
 ```
-  
+
+
 ### Heroku: Environment variables
 
 Finally, configure each of the environment variable from Heroku website or using Heroku CLI command `heroku config:set key=value`:
