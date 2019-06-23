@@ -44,7 +44,8 @@ web: cd client && PORT=3000 npm start
 api: PORT=3001 && bundle exec rails s
 ```
 
-With Foreman set up to manage multiple processes, we can run Campoutz with just the terminal command:  ` $foreman start -f Procfile.dev`
+With Foreman set up to manage multiple processes, we can run Campoutz with just the terminal command:
+` $foreman start -f Procfile.dev`
 
 Or we can create a rake file `start.rake` in our lib/tasks directory to let us run the app with a single terminal command: `$rake start`
 
@@ -70,7 +71,7 @@ To handle different pages within Create React App (using React Router) will requ
 
 First tell Rails to pass any HTML requests that it doesn’t catch (not on listed on config/routes file) to our Create React App. 
 
-Swap the app/controllers/application_controller.rb from using the API to using Base.
+Change the app/controllers/application_controller.rb from using the *API* to using *Base*.
 
 In the app/controllers/application_controller.rb, add a fallback_index_html method:
 ```
@@ -82,7 +83,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-Then add get routes at the bottom of the config/routes.rb:
+Then add *get* route at the bottom of the config/routes.rb:
 
 ```
 get '*path', to: "application#fallback_index_html", constraints: ->(request) do
@@ -90,16 +91,16 @@ get '*path', to: "application#fallback_index_html", constraints: ->(request) do
 End
 ```
 
-That way Rails will pass anything it doesn’t match over to the client/index.html so that React Router can take over.
+That way Rails will pass anything it doesn’t match over to the *client/index.html* so that React Router can take over.
 
-Next, add a new api_controller.rb file to the app/controllers:
+Next, create a new `api_controller.rb`  file to the app/controllers:
 
 ```
 class ApiController < ActionController::API
 end
 ```
 
-Change any new controllers you make to inherit from ApiController, not ApplicationController. Example:
+Change any new controllers you make to inherit from *ApiController*, not *ApplicationController*.  For example:
 
 ```
 class UserController < ApiController
@@ -108,14 +109,14 @@ end
 
 ### Environment Variables: Create-React-App & Dotenv
 
-dotenv is a module that loads variables from a .env file into process.env and for storing keys, URL’s and other sensitive information.
+dotenv is a module that loads variables from a .env file into process.env. It's used for storing keys, URL’s and other sensitive information.
 
 Install dotenv module: `npm install --save dotenv `
 
-Next, require the module from client/src/Index.js or client/src/App.js: 
+Next, require the module from *client/src/Index.js* or *client/src/App.js* 
 `require('dotenv').config()`
 
-Create  a .env file in the root directory of our client project. Then we can add environment specific variables on new lines:  `REACT_APP_SECRET=VALUE`
+Create  a `.env`  file in the root directory of our client project. Then we can add environment specific variables on new lines:  `REACT_APP_SECRET=VALUE`
 
 ```
 REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
@@ -123,7 +124,7 @@ REACT_APP_RIDB_API_KEY=123456a7-1234-1234-1234-12b123c0ab12
 REACT_APP_GOOGLE_MAPS_API_KEY=AbcdStYasI1wnj6wWCHWn3-4HR9gHKBG
 ```
 
-We can now access the keys and values defined in our .env file:
+We can now access the keys and values defined in our  *.env* file:
 
 ```
 const RIDB_URL = `${process.env.REACT_APP_API_RIDB_ENDPOINT}/api/v1`;
@@ -192,7 +193,7 @@ $git commit -m "ready for first push to heroku"
 $git push heroku master
 ```
 
-After the app is built, set up the database and seed file :
+After the app is built on Heroku, set up the database and seed file :
 ```
 $heroku run rake db:migrate
 $heroku run rake db:seed
@@ -200,7 +201,7 @@ $heroku run rake db:seed
   
 ### Heroku: Environment variables
 
-Configure each of the environment variable from Heroku website or Heroku CLI command `heroku config:set key=value`:
+Finally, configure each of the environment variable from Heroku website or using Heroku CLI command `heroku config:set key=value`:
 
 ```
 $ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
@@ -208,7 +209,7 @@ $ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 
 Run `Heroku config` to see a list of the configured environment variables.
 
-## Deployed
-That completes the deployment Campoutz app to the internet.
+## Conclusion
+That completes the deployment of Campoutz app to the internet.
 
 You can find my app here: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/) 
