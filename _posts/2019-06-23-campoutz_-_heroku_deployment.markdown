@@ -148,7 +148,9 @@ Then update the file to include the script values:
 ### Procfile for production
 Next create a Procfile in our root directory to tell production how to start the rails app (note: this was a step setup in rake start:production earlier on). Add the below line to Profile.
 
-``` web: bundle exec rails s ```
+```
+web: bundle exec rails s 
+```
 ### Heroku: Create app
 Create your app on Heroku either om Heroku website or from the terminal using Heroku CLI: `$heroku apps:create campoutz`
 #### Heroku: Buildpack
@@ -188,7 +190,9 @@ Run `$heroku config` to check a list of the configured environment variables.
 
 Finally,  celebrate deploying your application:
 
-```$heroku open```
+```
+$heroku open
+```
 ## Conclusion
 That completes the deployment of Campoutz app to the internet.
 You can find my app here: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/) 
