@@ -14,9 +14,9 @@ These two blog posts, [A Rock Solid, Modern Web Stack—Rails 5 API + ActiveAdmi
 
 Without Foreman, in order to run Campoutz locally, we would use two terminal, one to execute the Rails API server `$rails s -p 3001` and the other to execute webpac dev server `$npm star`
 
-To simplify the boot up, we install Foreman to run the app with a single command.
+To simplify the boot up, we will install Foreman to run the app with a single command.
 
-Set up Foreman:
+### Set up Foreman:
 
 Install Foreman gem: `$gem install Foreman`
 
@@ -35,7 +35,8 @@ group :development, :test do
 end
 ```
 	
-Update our gem: `$bundle install`
+Update our gem: 
+`$bundle install`
 
 Create a Profile.dev (we’ll only use this for dev since we don’t need a node server in production):
 ```
