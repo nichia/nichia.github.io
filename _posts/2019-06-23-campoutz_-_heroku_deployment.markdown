@@ -9,11 +9,11 @@ Now that Campoutz app is completed and running locally, it is time to look into 
 
 These two blog posts, [A Rock Solid, Modern Web Stack—Rails 5 API + ActiveAdmin + Create React App on Heroku](https://blog.heroku.com/a-rock-solid-modern-web-stack) and [ReactJS + Ruby on Rails API + Heroku App](https://medium.com/@bruno_boehm/reactjs-ruby-on-rails-api-heroku-app-2645c93f0814) were really helpful in explaining  the steps for deploying web stack applications with ReactJs frontend and Ruby on Rails API backend on Heroku. After reading these blog posts and the articles provided by [Heroku](https://devcenter.heroku.com/), I was able to host Campoutz app on Heroku.
 ## Foreman
-Without Foreman, in order to run Campoutz locally, we would use two terminal windows, one to execute the Rails API server `$ rails s -p 3001` and the other to execute webpac dev server `$ npm star`
+Without Foreman, in order to run Campoutz locally, we would use two terminal windows, one to execute the Rails API server `$ rails s -p 3001` and the other to execute webpac dev server `$ npm start`
 
 To simplify the boot up, we will install Foreman to run the app with a single command.
 ### Set up Foreman:
-Install Foreman gem: `$ gem install Foreman`
+Install Foreman gem: `$ gem install foreman`
 
 Add Foreman to our `gemfile` (in :development group):
 
