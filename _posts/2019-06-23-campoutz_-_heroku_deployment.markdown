@@ -153,7 +153,7 @@ web: bundle exec rails s
 ```
 ### Heroku: Create app
 Create your app on Heroku either om Heroku website or from the terminal using Heroku CLI: `$heroku apps:create campoutz`
-#### Heroku: Buildpack
+### Heroku: Buildpack
 Let’s now tell Heroku to start by building the node app using package.json, and then build the rails app with the following terminal commands:
 
 ```
