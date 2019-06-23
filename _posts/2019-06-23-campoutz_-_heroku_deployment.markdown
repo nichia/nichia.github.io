@@ -65,7 +65,7 @@ First tell Rails to pass any HTML requests that it doesn’t catch (not listed o
 
 Then change the *app/controllers/application_controller.rb* from using the *API* to using *Base*.
 
-In the *app/controllers/application_controller.rb*, add a fallback_index_html method. The *app/controllers/application_controller.rb* file will contains the following line:
+In the *app/controllers/application_controller.rb*, add a *fallback_index_html* method. The *app/controllers/application_controller.rb* file will include the following line:
 ```
 class ApplicationController < ActionController::Base
 
