@@ -188,7 +188,7 @@ Finally, configure each of the environment variable from Heroku website or using
 $ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 ```
 
-Run `$heroku config` to check a list of the configured environment variables.
+Run `$ heroku config` to see a list of the configured environment variables.
 
 Finally,  celebrate the success of deploying your application:
 
