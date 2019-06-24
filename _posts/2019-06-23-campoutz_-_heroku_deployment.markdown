@@ -194,7 +194,11 @@ Run the above command for each of the environment variables in your *Client .env
 
 If your Rails app uses *dotenv* gem to manage Rails environment variables, remember to run the above command for each of these variables too.
 
-If your Rails app uses *figaro* gem instead of *dotenv*, run the figaro command to set values from your Rails configuration file all at once: `$ figaro heroku:set -e production` 
+If your Rails app uses *figaro* gem instead of *dotenv*, run the figaro command to set values from your Rails configuration file all at once:
+
+```
+$ figaro heroku:set -e production
+``` 
 
 You can run `$ heroku config` to see a list of the configured environment variables available on Heroku.
 
