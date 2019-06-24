@@ -148,10 +148,8 @@ web: bundle exec rails s
 Create your app on Heroku either on Heroku website or from the terminal using Heroku CLI: `$ heroku apps:create campoutz`
 ### Heroku: Buildpack
 Let’s now tell Heroku to start by building the node app using *package.json*, and then build the rails app with the following terminal commands:  
-``
-$ heroku buildpacks:add heroku/nodejs --index 1  
-$ heroku buildpacks:add heroku/ruby --index 2
-``
+`$ heroku buildpacks:add heroku/nodejs --index 1`  
+`$ heroku buildpacks:add heroku/ruby --index 2`
 
 [Buildpacks]( https://devcenter.heroku.com/articles/buildpacks) will tell Heroku that we want to use two build processes, first use node to manage the front end (requires *package.json*), and then ruby for the Rails API (requires *gemfile*).
 
@@ -160,11 +158,9 @@ We can now test our production build locally with our Rake task `$ rake start:pr
 Remember to add the /public folder to your .gitignore so it doesn’t get saved to GitHub
 ### Heroku: Push changes
 Now we are ready to push the production app out to Heroku with these terminal commands:  
-``
-$ git add .  
-$ git commit -m "ready for first push to heroku"  
-$ git push heroku master
-``
+`$ git add .`  
+``$ git commit -m "ready for first push to heroku"``  
+`$ git push heroku master`
 
 After the app is built on Heroku, set up the database and seed file :  
 ``
@@ -173,25 +169,25 @@ $ heroku run rake db:seed
 ``
 ### Heroku: Environment variables
 Finally, configure each of the environment variable either from Heroku website or using Heroku CLI command `heroku config:set key=value`:  
-``
+`
 $ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
-``
+`
 
 Run the above command for each of the environment variables in your *Client .env* file. 
 
 If your Rails app uses *dotenv* gem to manage Rails environment variables, remember to run the above command for each of these variables too.
 
 If your Rails app uses *figaro* gem instead of *dotenv*, run the figaro command to set values from your Rails configuration file all at once:  
-``
+`
 $ figaro heroku:set -e production
-``
+`
 
 You can run `$ heroku config` to see a list of the configured environment variables available on Heroku.
 
 Finally,  celebrate the success of deploying your application:  
-``
+`
 $ heroku open
-``
+`
 ## Conclusion
 That completes the deployment of Campoutz app to the internet.
 You can find my app here: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/) 
