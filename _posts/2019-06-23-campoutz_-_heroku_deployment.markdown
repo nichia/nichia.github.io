@@ -41,7 +41,7 @@ api: PORT=3001 && bundle exec rails s
 
 With Foreman set up to manage multiple processes, we can run Campoutz with just the terminal command: `$ foreman start -f Procfile.dev`
 
-Or we can create a rake file `start.rake` in our lib/tasks directory to let us run the app with a single terminal command: `$ rake start`
+Or we can create a rake file `start.rake` in our lib/tasks directory to let us run the app with the rake command: `$ rake start`
 
 ```
 namespace :start do
@@ -65,7 +65,7 @@ First tell Rails to pass any HTML requests that it doesn’t catch (not listed o
 
 Then change the *app/controllers/application_controller.rb* from using the *API* to using *Base*.
 
-In the *app/controllers/application_controller.rb*, add a *fallback_index_html* method. The *app/controllers/application_controller.rb* file will include the following line:
+In the *app/controllers/application_controller.rb*, add a *fallback_index_html* method:
 ```
 class ApplicationController < ActionController::Base
 
@@ -92,14 +92,14 @@ class ApiController < ActionController::API
 end
 ```
 
-Change any new controllers you make to inherit from *ApiController*, not *ApplicationController*.  For example:
+Change any new controllers you make to inherit from *ApiController*, not *ApplicationController*.  This ensures that any controllers you make can continue to take advantage of the slimmed down API version. For example:
 
 ```
 class UserController < ApiController
 end
 ```
 ### Environment Variables: Create-React-App & Dotenv
-dotenv is a module that loads variables from a .env file into process.env. It's used for storing keys, URL’s and other sensitive information.
+dotenv is a module that loads variables from a *.env* file into *process.env* global variables when deployed. It's used for storing keys, URL’s and other sensitive information.
 
 Install dotenv module: `$ npm install --save dotenv `
 
@@ -133,10 +133,10 @@ Create an account on [Heroku website]( https://signup.heroku.com/login).
 Install [Heroku CLI]( https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
 Login to Heroku from the root directory of your project: `$ heroku login`	
-### `package.json` for node.js
-The campoutz app to be deployed on Heroku is a node.js application, so we need to create a package.json file in the root directory for our application. This *package.json* file is separate from the package.json file that was created for the client react app.
+### *package.json* for node.js
+The campoutz app to be deployed on Heroku is a node.js application, so we need to create a *package.json* file in the root directory for our application. This *package.json* file is different from the package.json file that was created for the client react app.
 
-Create `package.json` file in the root directory with this command: `$ npm init`	
+Create `package.json` file in the root directory with this command: `$ npm init` and follow the set up prompts.
 
 Then update the file to include the script values:
 
@@ -147,16 +147,18 @@ Then update the file to include the script values:
     	"postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   	}
 ```
-### Procfile for production
-Next create a new `Procfile` in our root directory to tell production how to start the rails app (note: this was a step setup in rake start:production earlier on). Add the below line to *Procfile*.
+### *Procfile* for production
+Next create a new `Procfile` in our root directory to tell production how to start the rails app (note: this was a step set up in rake start:production earlier on). 
+
+Add the below line to *Procfile*.
 
 ```
 web: bundle exec rails s 
 ```
 ### Heroku: Create app
-Create your app on Heroku either om Heroku website or from the terminal using Heroku CLI: `$ heroku apps:create campoutz`
+Create your app on Heroku either on Heroku website or from the terminal using Heroku CLI: `$ heroku apps:create campoutz`
 ### Heroku: Buildpack
-Let’s now tell Heroku to start by building the node app using package.json, and then build the rails app with the following terminal commands:
+Let’s now tell Heroku to start by building the node app using *package.json*, and then build the rails app with the following terminal commands:
 
 ```
 $ heroku buildpacks:add heroku/nodejs --index 1
@@ -165,7 +167,7 @@ $ heroku buildpacks:add heroku/ruby --index 2
 
 [Buildpacks]( https://devcenter.heroku.com/articles/buildpacks) will tell Heroku that we want to use two build processes, first use node to manage the front end (requires *package.json*), and then ruby for the Rails API (requires *gemfile*).
 
-We can now test our production build locally with our Rake task `$ rake start:production`. This rake task will run foreman (with our new Procfile) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file).
+We can now test our production build locally with our Rake task `$ rake start:production`. This rake task will run *foreman* (with our new *Procfile*) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file).
 
 Remember to add the /public folder to your .gitignore so it doesn’t get saved to GitHub
 ### Heroku: Push changes
@@ -182,13 +184,19 @@ $ heroku run rake db:migrate
 $ heroku run rake db:seed
 ```
 ### Heroku: Environment variables
-Finally, configure each of the environment variable from Heroku website or using Heroku CLI command `heroku config:set key=value`:
+Finally, configure each of the environment variable either from Heroku website or using Heroku CLI command `heroku config:set key=value`:
 
 ```
 $ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 ```
 
-Run `$ heroku config` to see a list of the configured environment variables.
+Run the above command for each of the environment variables in your *Client .env* file. 
+
+If your Rails API uses *dotenv* gem to manage Rails environment variables, remember to run the above command for each of these variables too.
+
+If your Rails API uses *figaro* gem instead of *dotenv*, run the figaro command to set values from your Rails configuration file all at once: `$ figaro heroku:set -e production` 
+
+You can run `$ heroku config` to see a list of the configured environment variables on Heroku.
 
 Finally,  celebrate the success of deploying your application:
 
