@@ -102,7 +102,7 @@ Next, require the module from *client/src/Index.js* or *client/src/App.js*  by a
 require('dotenv').config()
 ```
 
-Create  a `.env`  file in the root directory of our client project. Then we can add environment specific variables on new lines:  `REACT_APP_SECRET=VALUE`
+Create  a `.env`  file in the root directory of our client project. Then we can add each environment specific variable on a new line:  `REACT_APP_SECRET=VALUE`
 ```
 REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 REACT_APP_RIDB_API_KEY=123456a7-1234-1234-1234-12b123c0ab12
