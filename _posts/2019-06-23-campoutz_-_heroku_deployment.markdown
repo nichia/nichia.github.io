@@ -41,7 +41,7 @@ api: PORT=3001 && bundle exec rails s
 
 With Foreman set up to manage multiple processes, we can run Campoutz with just the terminal command: `$ foreman start -f Procfile.dev`
 
-Or we can create a rake file `start.rake` in our lib/tasks directory to let us run the app with the rake command: `$ rake start`
+Let's also can create a rake file `start.rake` in our lib/tasks directory to let us run the app with the rake command: `$ rake start`
 
 ```
 namespace :start do
@@ -59,7 +59,7 @@ end
 task :start => 'start:development'
 ```
 ## React Router
-To handle different pages within Create React App (using React Router) we will require changes to the Rails app.
+To handle different pages within Create React App (using React Router) when the app is deployed on Heroku, we will require changes to the Rails app.
 
 First tell Rails to pass any HTML requests that it doesn’t catch (not listed on *config/routes* file) to our Create React App. 
 
@@ -133,7 +133,7 @@ Create an account on [Heroku website]( https://signup.heroku.com/login).
 Install [Heroku CLI]( https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
 Login to Heroku from the root directory of your project: `$ heroku login`	
-### *package.json* for node.js
+### *package.json*: for node.js
 The campoutz app to be deployed on Heroku is a node.js application, so we need to create a *package.json* file in the root directory for our application. This *package.json* file is different from the package.json file that was created for the client react app.
 
 Create `package.json` file in the root directory with this command: `$ npm init` and follow the set up prompts.
@@ -147,7 +147,7 @@ Then update the file to include the script values:
     	"postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   	}
 ```
-### *Procfile* for production
+### *Procfile*: for production
 Next create a new `Procfile` in our root directory to tell production how to start the rails app (note: this was a step set up in rake start:production earlier on). 
 
 Add the below line to *Procfile*.
@@ -192,11 +192,11 @@ $ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 
 Run the above command for each of the environment variables in your *Client .env* file. 
 
-If your Rails API uses *dotenv* gem to manage Rails environment variables, remember to run the above command for each of these variables too.
+If your Rails app uses *dotenv* gem to manage Rails environment variables, remember to run the above command for each of these variables too.
 
-If your Rails API uses *figaro* gem instead of *dotenv*, run the figaro command to set values from your Rails configuration file all at once: `$ figaro heroku:set -e production` 
+If your Rails app uses *figaro* gem instead of *dotenv*, run the figaro command to set values from your Rails configuration file all at once: `$ figaro heroku:set -e production` 
 
-You can run `$ heroku config` to see a list of the configured environment variables on Heroku.
+You can run `$ heroku config` to see a list of the configured environment variables available on Heroku.
 
 Finally,  celebrate the success of deploying your application:
 
