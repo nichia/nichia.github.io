@@ -170,7 +170,7 @@ After the app is built on Heroku, set up the database and seed file :
 `$ heroku run rake db:migrate`  
 `$ heroku run rake db:seed`
 ### Heroku: Environment variables
-Finally, configure each of the environment variable either from Heroku website or using Heroku CLI command: `$ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
+Next, configure each of the environment variable either from Heroku website or using Heroku CLI command: `$ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 `
 
 Run the above command for each of the environment variables in your *Client .env* file. 
