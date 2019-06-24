@@ -146,6 +146,11 @@ web: bundle exec rails s
 ```
 ### Heroku: Create app
 Create your app on Heroku either on Heroku website or from the terminal using Heroku CLI: `$ heroku apps:create campoutz`
+
+Confirm a remote named `heroku` has been set for your app: `$ git remote -v`
+
+If your app was created using Heroku website, add a remote to your local repository with:  
+`$ heroku git:remote -a campoutz`
 ### Heroku: Buildpack
 Let’s now tell Heroku to start by building the node app using *package.json*, and then build the rails app with the following terminal commands:  
 `$ heroku buildpacks:add heroku/nodejs --index 1`  
@@ -156,8 +161,8 @@ Let’s now tell Heroku to start by building the node app using *package.json*, 
 We can now test our production build locally with our Rake task `$ rake start:production`. This rake task will run *foreman* (with our new *Procfile*) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file).
 
 Remember to add the /public folder to your .gitignore so it doesn’t get saved to GitHub
-### Heroku: Push changes
-Now we are ready to push the production app out to Heroku with these terminal commands:  
+### Heroku: Deploying code
+Now we are ready to [push the production app out to Heroku](https://devcenter.heroku.com/articles/git) with these terminal commands:  
 `$ git add .`  
 ``$ git commit -m "ready for first push to heroku"``  
 `$ git push heroku master`
