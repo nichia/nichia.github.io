@@ -149,8 +149,7 @@ Create your app on Heroku either on Heroku website or from the terminal using He
 
 Confirm a remote named `heroku` has been set for your app: `$ git remote -v`
 
-If your app was created using Heroku website, add a remote to your local repository with:  
-`$ heroku git:remote -a campoutz`
+If your app was created using Heroku website, add a remote to your local repository with: `$ heroku git:remote -a campoutz`
 ### Heroku: Buildpack
 Let’s now tell Heroku to start by building the node app using *package.json*, and then build the rails app with the following terminal commands:  
 `$ heroku buildpacks:add heroku/nodejs --index 1`  
@@ -171,8 +170,7 @@ After the app is built on Heroku, set up the database and seed file :
 `$ heroku run rake db:migrate`  
 `$ heroku run rake db:seed`
 ### Heroku: Environment variables
-Finally, configure each of the environment variable either from Heroku website or using Heroku CLI command:  
-`$ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
+Finally, configure each of the environment variable either from Heroku website or using Heroku CLI command: `$ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 `
 
 Run the above command for each of the environment variables in your *Client .env* file. 
