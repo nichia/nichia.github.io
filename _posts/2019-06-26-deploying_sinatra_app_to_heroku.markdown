@@ -73,7 +73,7 @@ require 'dotenv'
 Dotenv.load
 ```
 
-Create a .env file in the project root directory. Then we can add each environment specific variable on a new line: 
+Create a `.env` file in the project root directory. Then we can add each environment specific variable on a new line: 
 ```
 SESSION_SECRET=project_session_secret
 ```
@@ -86,6 +86,10 @@ set :session_secret, ENV['SESSION_SECRET']
 
 Remember to add the .env file to your .gitignore so it doesn’t get saved to GitHub.
 ## Deploy to Heroku
+Create an account on [Heroku website]( https://signup.heroku.com/login).
+​
+Install [Heroku CLI]( https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+​
 Login to Heroku: `$ heroku login`
 
 Create a Heroku app: `$ heroku apps:create my-favetools`
