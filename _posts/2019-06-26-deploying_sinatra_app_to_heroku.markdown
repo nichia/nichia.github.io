@@ -1,15 +1,15 @@
 ---
 layout: post
 title:      "Deploying Sinatra App to Heroku "
-date:       2019-06-27 01:32:53 +0000
+date:       2019-06-26 21:32:53 -0400
 permalink:  deploying_sinatra_app_to_heroku
 ---
 
 
-To deploy My-Favetools, a Sinatra app to Heroku is a simpler than the React JS/Rails app.
+To deploy My-Favetools, a Sinatra app to Heroku is a simpler process than when I deployed the React/Rails app to Heroku.
 
 ## Postgresql
-Heroku does not support Sqlite3 database. First order of business is to manually convert My-Favetools app to use Postgresql.
+Heroku does not support Sqlite3 database. So the first order of business for me to deploy my sinatra project is to manually convert the sqlite3 database to Postgresql.
 
 The steps to migrate to Postgresql are:
 
@@ -59,6 +59,8 @@ Test on the local Heroku server, run `$ heroku local` and view the local app at 
 Update `Gemfile` to include:
 
 ```gem 'dotenv'```
+
+Run `$ bundle install`
 
 Update `config/environment.rb` to include:
 
