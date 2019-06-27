@@ -99,5 +99,18 @@ You can find my app here: [https://my-favetools.herokuapp.com/](https://my-favet
     $ username: jade
     $ email: jade@email.com
     $ password: Pass1@</sup></sub>
+		
+## Sources
+[Deploying a Simple Sinatra App with Postgres to Heroku](https://medium.com/@dmccoy/deploying-a-simple-sinatra-app-with-postgres-to-heroku-c4a883d3f19e)
+
+[Sinatra - postgresql](http://recipes.sinatrarb.com/p/databases/postgresql-activerecord?)
+
+[Heroku - sqlite3](https://devcenter.heroku.com/articles/sqlite3)
+
+[Heroku - rack base app](https://devcenter.heroku.com/articles/rack)
+
+
+
+
 
 
