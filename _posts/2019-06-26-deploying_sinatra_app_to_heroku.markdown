@@ -9,7 +9,7 @@ permalink:  deploying_sinatra_app_to_heroku
 Deploying My-Favetools, a Sinatra app, to Heroku is a simpler task than deploying the React/Rails app to Heroku.
 
 ## Postgresql
-Heroku does not support Sqlite3 database. So the first order of business for me to deploy my sinatra project is to manually convert the sqlite3 database to Postgresql.
+Heroku does not support Sqlite3 database. So the first order of business is to manually convert the sqlite3 database to Postgresql.
 
 The steps to migrate to Postgresql are:
 
@@ -86,10 +86,10 @@ set :session_secret, ENV['SESSION_SECRET']
 
 Remember to add the .env file to your .gitignore so it doesn’t get saved to GitHub.
 ## Deploy to Heroku
-Create an account on [Heroku website]( https://signup.heroku.com/login).
-​
+Create an account on [Heroku website]( https://signup.heroku.com/login)
+
 Install [Heroku CLI]( https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-​
+
 Login to Heroku: `$ heroku login`
 
 Create a Heroku app: `$ heroku apps:create my-favetools`
