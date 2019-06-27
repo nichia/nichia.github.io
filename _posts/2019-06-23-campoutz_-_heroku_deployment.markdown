@@ -92,7 +92,7 @@ Change any new controllers you make to inherit from *ApiController*, not *Applic
 class UserController < ApiController
 end
 ```
-### Environment Variables: Create-React-App & Dotenv
+## Environment Variables: Create-React-App & Dotenv
 dotenv is a module that loads variables from a *.env* file into *process.env* global variables when deployed. It's used for storing keys, URL’s and other sensitive information.
 
 Install dotenv module: `$ npm install --save dotenv `
@@ -118,13 +118,8 @@ const RIDB_API_KEY = process.env.REACT_APP_RIDB_API_KEY;
 Later, when creating Heroku app, we can set up each of the environment variables using terminal command `$ heroku config:set`.
 
 Remember to add the .env file to your .gitignore so it doesn’t get saved to GitHub
-## Heroku: Deployment
-Create an account on [Heroku website]( https://signup.heroku.com/login).
 
-Install [Heroku CLI]( https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-
-Login to Heroku from the root directory of your project: `$ heroku login`	
-### *package.json*: for node.js
+## *package.json*: for node.js
 The campoutz app to be deployed on Heroku is a node.js application, so we need to create a *package.json* file in the root directory for our application. This *package.json* file is different from the package.json file that was created for the client react app.
 
 Create `package.json` file in the root directory with this command: `$ npm init` and follow the set up prompts.
@@ -137,13 +132,19 @@ Then update the file to include the script values:
     	"postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   	}
 ```
-### *Procfile*: for production
+## *Procfile*: for production
 Next create a new `Procfile` in our root directory to tell production how to start the rails app (note: this was a step set up in rake start:production earlier on). 
 
 Add the below line to *Procfile*.
 ```
 web: bundle exec rails s 
 ```
+## Heroku: Deployment
+Create an account on [Heroku website]( https://signup.heroku.com/login).
+
+Install [Heroku CLI]( https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+
+Login to Heroku from the root directory of your project: `$ heroku login`	
 ### Heroku: Create app
 Create your app on Heroku either on Heroku website or from the terminal using Heroku CLI: `$ heroku apps:create campoutz`
 
