@@ -25,7 +25,7 @@ ActiveRecord::Base.establish_connection(
 )
 ```  
 with
-``` set :database_file, './database.yml'```
+`` set :database_file, './database.yml'``
 
 Create `config/database.yml` file to include:
 ```
@@ -41,9 +41,9 @@ production:
   pool: 5
 ```
 
-Run `$ rake db:create` *This creates the new database*
+Run `$ rake db:create` *(this creates the new database)*
 
-Run `$ rake db:seed` *This populate the database with seed data*
+Run `$ rake db:seed` *(this populates the database with seed data)*
 
 ## Procfile: for production
 Add `Procfile` to the project root directory to declare what commands are run by the application’s dynos on Heroku platform.
