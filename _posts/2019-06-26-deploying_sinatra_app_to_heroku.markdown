@@ -6,7 +6,7 @@ permalink:  deploying_sinatra_app_to_heroku
 ---
 
 
-To deploy My-Favetools, a Sinatra app to Heroku is a simpler process than when I deployed the React/Rails app to Heroku.
+Deploying My-Favetools, a Sinatra app, to Heroku is a simpler task than deploying the React/Rails app to Heroku.
 
 ## Postgresql
 Heroku does not support Sqlite3 database. So the first order of business for me to deploy my sinatra project is to manually convert the sqlite3 database to Postgresql.
