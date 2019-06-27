@@ -157,7 +157,7 @@ Let’s now tell Heroku to start by building the node app using *package.json*, 
 
 [Buildpacks]( https://devcenter.heroku.com/articles/buildpacks) will tell Heroku that we want to use two build processes, first use node to manage the front end (requires *package.json*), and then ruby for the Rails API (requires *gemfile*).
 
-We can now test our production build locally with our Rake task `$ rake start:production`. This rake task will run *foreman* (with our new *Procfile*) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file).
+We can now test our production build locally with our Rake task `$ rake start:production`. This rake task will run *foreman* (with our new *Procfile*) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file). Open a browser to view the local app at `localhost:5000`
 
 Remember to add the /public folder to your .gitignore so it doesn’t get saved to GitHub
 ### Heroku: Deploying code
