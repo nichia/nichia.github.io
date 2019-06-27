@@ -25,7 +25,9 @@ ActiveRecord::Base.establish_connection(
 )
 ```  
 with
-`` set :database_file, './database.yml'``
+```
+set :database_file, './database.yml'
+```
 
 Create `config/database.yml` file to include:
 ```
@@ -58,7 +60,9 @@ Test on the local Heroku server, run `$ heroku local` and view the local app at 
 ## Environment variables: dotenv
 Update `Gemfile` to include:
 
-```gem 'dotenv'```
+```
+gem 'dotenv'
+```
 
 Run `$ bundle install`
 
@@ -69,11 +73,16 @@ require 'dotenv'
 Dotenv.load
 ```
 
-Create a .env file in the project root directory. Then we can add each environment specific variable on a new line: ``SESSION_SECRET=project_session_secret``
+Create a .env file in the project root directory. Then we can add each environment specific variable on a new line: 
+```
+SESSION_SECRET=project_session_secret
+```
 
 From *application_controller.rb*, we can now access the secret defined in our .env file. 
 
-```set :session_secret, ENV['SESSION_SECRET']```
+```
+set :session_secret, ENV['SESSION_SECRET']
+```
 
 Remember to add the .env file to your .gitignore so it doesn’t get saved to GitHub.
 ## Deploy to Heroku
@@ -81,7 +90,7 @@ Login to Heroku: `$ heroku login`
 
 Create a Heroku app: `$ heroku apps:create my-favetools`
 
-Push your project to the new Heroku app: `$ git push Heroku master`
+Push your project to the new Heroku app: `$ git push heroku master`
 
 After the app is built on Heroku, set the seed file if you have any: `$ heroku rake db:seed`
 
@@ -95,9 +104,9 @@ That completes the deployment of my-favetools app to the internet.
 
 You can find my app here: [https://my-favetools.herokuapp.com/](https://my-favetools.herokuapp.com/)
 
-<sub><sup>*Sign up and login to keep track of and share your favorite tools. Or, you can use this pre-made user account setting to login:
-    $ username: jade
-    $ email: jade@email.com
+<sub><sup>*Sign up and login to keep track of and share your favorite tools. Or, you can use this pre-made user account setting to login:  
+    $ username: jade  
+    $ email: jade@email.com  
     $ password: Pass1@</sup></sub>
 		
 ## Sources
