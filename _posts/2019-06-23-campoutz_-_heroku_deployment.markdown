@@ -186,4 +186,5 @@ Finally,  celebrate the success of deploying your application:
 `$ heroku open`
 ## Conclusion
 That completes the deployment of Campoutz app to the internet.
+
 You can find my app here: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/) 
