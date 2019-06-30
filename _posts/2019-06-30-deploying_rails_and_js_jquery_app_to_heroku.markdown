@@ -53,7 +53,9 @@ After searching, finally found the fix [on Stack Overflow]( https://stackoverflo
 
 Update `config/environments/production.rb` file:  
 
-```config.assets.compile = true```
+```
+config.assets.compile = true
+```
 ## Conclusion
 That completes the deployment of kitchenandrecipes app to the internet. 
 
