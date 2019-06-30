@@ -42,18 +42,18 @@ Configure the environment variable Heroku: example
 
 Push your project to the new Heroku app: `$ git push heroku master`
 
-After the app is built on Heroku, set the see file if you have any: `$ heroku run rake db:seed`
+After the app is built on Heroku, set the seed file if you have any: `$ heroku run rake db:seed`
 
 Run `$ heroku open` to open the url in a browser and view your app
 
 ## Major Issue
-One major issue that I ran into is that while the JS/jQuery pages are able to access the asset-pipelines data, the Rails views pages were not able to load as it could not access the image file from asset-pipeline. 
+One major issue that I ran into - while the JS/jQuery pages are able to access the asset-pipelines data, the Rails views pages were not able to load as it could not access the image file from asset-pipeline. 
 After searching, finally found the fix [on Stack Overflow]( https://stackoverflow.com/questions/49440304/rails-asset-is-not-present-in-asset-pipeline-when-using-image-tag
 )
 
-Update `config/environments/production.rb` file to comment out:  
+Update `config/environments/production.rb` file:  
 
-```# config.assets.compile = false```
+```# config.assets.compile = true```
 ## Conclusion
 That completes the deployment of kitchenandrecipes app to the internet. 
 
