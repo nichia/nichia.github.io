@@ -94,12 +94,13 @@ Login to Heroku: `$ heroku login`
 
 Create a Heroku app: `$ heroku apps:create my-favetools`
 
+Configure the environment variables on Heroku:   
+`$ heroku config:set SESSION_SECRET=project_session_secret`
+
 Push your project to the new Heroku app: `$ git push heroku master`
 
 After the app is built on Heroku, set the seed file if you have any: `$ heroku run rake db:seed`
 
-Next, configure the environment variable Heroku:   
-`$ heroku config:set SESSION_SECRET=project_session_secret`
 
 Run `$ heroku open` to open the url in a browser and view your app
 
