@@ -62,9 +62,9 @@ That completes the deployment of kitchenandrecipes app to the internet.
 You can find my app here: [https://kitchenandrecipes.herokuapp.com/](https://kitchenandrecipes.herokuapp.com/)
 
 <sub><sup>* Sign up and login to keep track of and share your recipes. Or, you can use this pre-made user account setting to login:
-$ username: lorem
-$ email: lorem@email.com
-$ password: Password1!<sup></sub>
+    $ username: lorem  
+    $ email: lorem@email.com  
+    $ password: Password1!</sup></sub>
 		
 
 ## Resource
