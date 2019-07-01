@@ -123,8 +123,3 @@ You can find my app here: [https://my-favetools.herokuapp.com/](https://my-favet
 
 [Heroku - rack base app](https://devcenter.heroku.com/articles/rack)
 
-
-
-
-
-
