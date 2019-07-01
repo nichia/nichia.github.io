@@ -69,7 +69,10 @@ $ password: Password1!<sup></sub>
 
 ## Resource
 [Container-Ready Rails 5](https://blog.heroku.com/container_ready_rails_5)
+
 [Rails Asset Pipeline on Heroku ](https://devcenter.heroku.com/articles/rails-asset-pipeline)
+
 [Getting Started on Heroku with Rails 5.x](https://devcenter.heroku.com/articles/getting-started-with-rails5)
+
 [Getting Started on Heroku with Ruby](https://devcenter.heroku.com/articles/getting-started-with-ruby)
 
