@@ -161,15 +161,6 @@ Let’s now tell Heroku to start by building the node app using *package.json*, 
 We can now test our production build locally with our Rake task `$ rake start:production`. This rake task will run *foreman* (with our new *Procfile*) and kickstart the rails server, that gets it's scripts from the /public folder (that previously only contained a robot.txt file). Open a browser to view the local app at `localhost:5000`
 
 Remember to add the /public folder to your .gitignore so it doesn’t get saved to GitHub
-### Heroku: Deploying code
-Now we are ready to [push the production app out to Heroku](https://devcenter.heroku.com/articles/git) with these terminal commands:  
-`$ git add .`  
-``$ git commit -m "ready for first push to heroku"``  
-`$ git push heroku master`
-
-After the app is built on Heroku, set up the database and seed file :  
-`$ heroku run rake db:migrate`  
-`$ heroku run rake db:seed`
 ### Heroku: Environment variables
 Next, configure each of the environment variable either from Heroku website or using Heroku CLI command: `$ heroku config:set REACT_APP_API_RIDB_ENDPOINT=https://ridb.recreation.gov
 `
@@ -182,6 +173,15 @@ If your Rails app uses *figaro* gem instead of *dotenv*, run the figaro command 
 `$ figaro heroku:set -e production`
 
 You can run `$ heroku config` to see a list of the configured environment variables available on Heroku.
+### Heroku: Deploying code
+Now we are ready to [push the production app out to Heroku](https://devcenter.heroku.com/articles/git) with these terminal commands:  
+`$ git add .`  
+``$ git commit -m "ready for first push to heroku"``  
+`$ git push heroku master`
+
+After the app is built on Heroku, set up the database and seed file :  
+`$ heroku run rake db:migrate`  
+`$ heroku run rake db:seed`
 
 Finally,  celebrate the success of deploying your application:  
 `$ heroku open`
