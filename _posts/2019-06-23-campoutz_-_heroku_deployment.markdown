@@ -189,3 +189,20 @@ Finally,  celebrate the success of deploying your application:
 That completes the deployment of Campoutz app to the internet.
 
 You can find my app here: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/) 
+## Sources
+[A Rock Solid, Modern Web Stack—Rails 5 API + ActiveAdmin + Create React App on Heroku](https://blog.heroku.com/a-rock-solid-modern-web-stack)
+
+[ReactJS + Ruby on Rails API + Heroku App](https://medium.com/@bruno_boehm/reactjs-ruby-on-rails-api-heroku-app-2645c93f0814)
+
+[Buildpacks]( https://devcenter.heroku.com/articles/buildpacks)
+
+[The Procfile](https://devcenter.heroku.com/articles/procfile)
+
+[SQLite on Heroku](https://devcenter.heroku.com/articles/sqlite3)
+
+[Deploying with Git](https://devcenter.heroku.com/articles/git)
+
+[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-heroku-postgres)
+
+[Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars)
+
