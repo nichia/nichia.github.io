@@ -39,7 +39,7 @@ api: PORT=3001 && bundle exec rails s
 
 With Foreman set up to manage multiple processes, we can run Campoutz with just the terminal command: `$ foreman start -f Procfile.dev`
 
-Let's also can create a rake file `start.rake` in our lib/tasks directory to let us run the app with the rake command: `$ rake start`
+Let's also create a rake file `start.rake` in our lib/tasks directory to let us run the app with the rake command: `$ rake start`
 ```
 namespace :start do
   desc 'Start development server'
