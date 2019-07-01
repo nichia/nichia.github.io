@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Deploying Rails and JS/jQuery App"
+title:      "Deploying Rails and JS/jQuery App on Heroku"
 date:       2019-06-30 18:20:24 -0400
 permalink:  deploying_rails_and_js_jquery_app_to_heroku
 ---
