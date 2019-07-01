@@ -35,10 +35,12 @@ Login to Heroku: `$ heroku login`
 
 Create a Heroku app: `$ heroku apps:create kitchenandrecipes` 
 
-Configure the environment variable Heroku: example
+Configure the environment variable Heroku: 
 
+``$ heroku config:set RAILS_SERVE_STATIC_FILES=true`` *( to enable public file server in production.rb)*  
 ``$ heroku config:set RAILS_MASTER_KEY=master.key``   
-``$ heroku config:set FACEBOOK_KEY=fb_provider_key``
+``$ heroku config:set FACEBOOK_KEY=fb_provider_key``  
+...
 
 Push your project to the new Heroku app: `$ git push heroku master`
 
