@@ -190,9 +190,9 @@ That completes the deployment of Campoutz app to the internet.
 
 You can find my app here: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/) 
 
-<sub><sup>* create your own sign-up or use this pre-made account to save to favorites:
-    ``username: lorem``
-    ``password: password`` </sup></sub>
+<sub><sup>* Create your own sign-up or use this pre-made account to save to favorites:  
+    $ username: lorem  
+    $ password: password</sup></sub>
 ## Sources
 [A Rock Solid, Modern Web Stack—Rails 5 API + ActiveAdmin + Create React App on Heroku](https://blog.heroku.com/a-rock-solid-modern-web-stack)
 
