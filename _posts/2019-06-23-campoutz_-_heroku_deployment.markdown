@@ -190,7 +190,7 @@ That completes the deployment of Campoutz app to the internet.
 
 You can find my app here: [https://campoutz.herokuapp.com/](https://campoutz.herokuapp.com/) 
 
-<sub><sup>* Create your own sign-up or use this pre-made account to save to favorites:  
+<sub><sup>* Create your own login or use this pre-made account to save to favorites:  
     $ username: lorem  
     $ password: password</sup></sub>
 ## Sources
