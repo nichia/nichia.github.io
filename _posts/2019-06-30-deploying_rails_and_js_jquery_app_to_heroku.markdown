@@ -26,6 +26,7 @@ A public/assets directory will be created.
 ## Procfile: for production
 Add `Procfile` to the project root directory to declare what command should be executed to start your app on Heroku platform.
 ```	
+web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
 release: bundle exec rake db:migrate
 ```
 Test on the local Heroku server, run `$ heroku local` and view the local app at `localhost:3000`
