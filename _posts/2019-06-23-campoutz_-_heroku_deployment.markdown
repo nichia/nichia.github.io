@@ -79,7 +79,7 @@ get '*path', to: "application#fallback_index_html", constraints: ->(request) do
 End
 ```
 
-That way Rails will pass anything it doesn’t match over to the *client/index.html* so that React Router can take over.
+That way, Rails will pass anything it doesn’t match over to the *client/index.html* so that React Router can take over.
 
 Next, create a new `api_controller.rb`  file under the *app/controllers* directory:
 ```
@@ -93,7 +93,7 @@ class UserController < ApiController
 end
 ```
 ## Environment Variables: Create-React-App & Dotenv
-dotenv is a module that loads variables from a *.env* file into *process.env* global variables when deployed. It's used for storing keys, URL’s and other sensitive information.
+Dotenv is a module that loads variables from a *.env* file into *process.env* global variables when deployed. It's used for storing keys, URL’s and other sensitive information.
 
 Install dotenv module: `$ npm install --save dotenv `
 
@@ -120,7 +120,7 @@ Later, when creating Heroku app, we can set up each of the environment variables
 Remember to add the .env file to your .gitignore so it doesn’t get saved to GitHub
 
 ## *package.json*: for node.js
-The campoutz app to be deployed on Heroku is a node.js application, so we need to create a *package.json* file in the root directory for our application. This *package.json* file is different from the package.json file that was created for the client react app.
+The Campoutz app to be deployed on Heroku is a node.js application, so we need to create a *package.json* file in the root directory for our application. This *package.json* file is different from the package.json file that was created for the client react app.
 
 Create `package.json` file in the root directory with this command: `$ npm init` and follow the set up prompts.
 
