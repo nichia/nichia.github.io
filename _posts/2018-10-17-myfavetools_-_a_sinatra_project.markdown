@@ -6,7 +6,7 @@ permalink:  myfavetools_-_a_sinatra_project
 ---
 
 
-It feelt good to finish my Sinatra project, My_FaveTools.
+It felt good to finish my Sinatra project, My_FaveTools.
 
 MyFaveTools is a Sinatra web application created to keep track of and share my favorite study videos, software, documents, and other tools that I find useful.
 
