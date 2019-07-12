@@ -5,7 +5,7 @@ date:       2019-06-30 18:20:24 -0400
 permalink:  deploying_rails_and_js_jquery_app_to_heroku
 ---
 
-KitchenandRecipes is a Ruby on rails application (with javascript/jQuery), to manage and share recipes. It uses Rails 5.2 Active Storage to manage and save files to Amazon S3 cloud storage service.
+KitchenandRecipes is a Ruby on rails application (with javascript/jQuery), which manages and shares recipes. It uses Rails 5.2 Active Storage to manage and save files to Amazon S3 cloud storage service.
 ```
 App Configuration:
 
@@ -50,7 +50,7 @@ After the app is built on Heroku, set the seed file if you have any: `$ heroku r
 Run `$ heroku open` to open the url in a browser and view your app
 
 ## Major Issue
-One major issue that I ran into - while the JS/jQuery pages are able to access the asset-pipelines data, the Rails views pages were not able to load as it could not access the image file from asset-pipeline. 
+One major issue that I ran into while the JS/jQuery pages were able to access the asset-pipelines data, the Rails views pages were not able to load as it could not access the image file from asset-pipeline. 
 After searching, finally found the fix [on Stack Overflow]( https://stackoverflow.com/questions/49440304/rails-asset-is-not-present-in-asset-pipeline-when-using-image-tag
 )
 
