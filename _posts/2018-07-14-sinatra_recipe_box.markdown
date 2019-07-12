@@ -5,9 +5,9 @@ date:       2018-07-14 15:59:42 -0400
 permalink:  sinatra_recipe_box
 ---
 
-Yes! another project completed... after some thoughts, I've decided to create a Recipe sharing system. 
+Yes! Another project completed. After some thought, I decided to create a Recipe sharing system. 
 
-Here's the steps taken to complete this project.
+Here are the steps taken to complete this project.
 
 1. Create a new repository on GitHub for Sinatra Application name “sinatra-recipe-box”
 
@@ -27,7 +27,6 @@ Here's the steps taken to complete this project.
 4. Create the db tables and models.
 * create tables, type rake db:create_migration NAME=create_yourtablename. Create all the table.
 * run rake db:migrate, and all your tables will be added
-
 
 5. Setup associations for the tables /app/models/
 
@@ -51,4 +50,4 @@ Here's the steps taken to complete this project.
 
 15. Add processing for Notes
 
-That pretty much sums it up.
+That sums up the process I took to complete this project.
