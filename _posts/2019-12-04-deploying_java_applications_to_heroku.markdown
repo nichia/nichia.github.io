@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Deploying Java Applications to Heroku"
-date:       2019-12-04 19:51:56 +0000
+date:       2019-12-04 14:51:58 -0500
 permalink:  deploying_java_applications_to_heroku
 ---
 
@@ -286,6 +286,8 @@ The application and database is now deployed. You can visit the app’s URL by r
 ```
 $ heroku open
 ```
+
+You can find a sample of the app here: https://cheese-mvc-heroku.herokuapp.com/
 
 #### View Logs
 
